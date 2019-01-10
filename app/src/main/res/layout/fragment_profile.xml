@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             xmlns:tools="http://schemas.android.com/tools">
+
+    <com.iviewlabs.kotlinsample.utils.BlurredImageView
+            android:id="@+id/blurred"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="200dp"
+            android:layout_marginBottom="36dp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <com.iviewlabs.kotlinsample.utils.CircularImageView
+                android:id="@+id/small_circle_image"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                app:civ_border="true"
+                app:civ_border_color="@color/background_main"
+                app:civ_border_width="4dp"
+        />
+
+        <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="جيمس بوند"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="-5dp"
+                android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:verticalScrollbarPosition="left"
+            android:minWidth="5dp"
+            android:paddingTop="200dp"
+    >
+
+        <TextView
+                android:id="@+id/text_info_content_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                tools:text="@string/sample_text"
+                android:textColor="@android:color/black"
+                android:gravity="right"
+                android:textSize="@dimen/textsize_14"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </ScrollView>
+
+
+</FrameLayout>
